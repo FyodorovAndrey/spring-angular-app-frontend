@@ -1,0 +1,57 @@
+<div class="register-page">
+  <h2>Register</h2>
+  <div>
+    <a routerLink="/login">If you already registered, please click here</a>
+  </div>
+  <form [formGroup]="registerForm">
+    <div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username">
+        </mat-form-field>
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="firstName">
+        </mat-form-field>
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput formControlName="lastName">
+        </mat-form-field>
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+      <div class="justify-content-center">
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm password</mat-label>
+          <input matInput type="password" formControlName="confirmPassword">
+        </mat-form-field>
+      </div>
+      <div id="button-div" class="row">
+        <button style="width: 20%"
+                mat-flat-button
+                color="primary"
+                [disabled]="registerForm.invalid"
+                (click)="submit()">
+          Register
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
